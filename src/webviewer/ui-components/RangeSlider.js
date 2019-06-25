@@ -4,11 +4,11 @@ const RangeSlider = props => (
       className="rangeSlider"
       type="range"
       min="1"
-      max={props.st._framesTotal || props.maxValue}
+      max={props.maxValue}
       step="1"
       style={{width: (props.width || "100%")}}
       // value="300"
-      defaultValue={props.st._currentFrame || props.currentValue}
+      defaultValue={props.currentValue}
       onChange={props.onChange}
     />
     <style jsx>{`

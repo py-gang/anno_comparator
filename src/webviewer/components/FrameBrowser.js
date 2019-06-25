@@ -5,6 +5,7 @@ import Checkbox from "../ui-components/Checkbox";
 import RadioButton from "../ui-components/RadioButton";
 import RangeSlider from "../ui-components/RangeSlider";
 import Button from "../ui-components/Button";
+import FrameNavigator from "./FrameNavigator";
 import { observer } from "mobx-react";
 import PlayerState from "../stores/PlayerState";
 
@@ -19,6 +20,7 @@ class FrameBrowser extends React.Component {
           <FrameOverlay />
           <FrameBackground />
         </div>
+        <div><FrameNavigator st={PlayerState} /></div>
         <RadioButton name="playerState" value="play" icon="fas fa-play" onChange={PlayerState.setPlayState} />
         <RadioButton name="playerState" value="playFast" icon="fas fa-forward" onChange={PlayerState.setPlayState} />
         <RadioButton name="playerState" value="pause" icon="fas fa-pause" onChange={PlayerState.setPlayState} />
